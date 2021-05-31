@@ -8,8 +8,8 @@
     margin: auto;
 }
 .header_list img{
-    width: 15vw;
-    border: 2px solid rgb(187, 51, 146);
+    width: 13vw;
+    border: 2px solid rgb(216, 27, 175);
 }
 .input-group{
     width: 15vw;
@@ -45,12 +45,14 @@ h1{
 
 /*Body List*/
 .body_list{
-    background: black;
+    background: rgb(53, 53, 53);
+    border: 2px solid black;
     width: 60vw;
     height: 28vw;
-    margin: 20px auto 0 auto;
+    margin: 2vw auto 0 auto;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 /*List side*/
@@ -60,4 +62,22 @@ h1{
     margin-left: -16vw;
     margin-right: 1vw;
     height: 28vw;
+    background: rgb(53, 53, 53);
+}
+.backButton{
+    margin-top: -2.5vw;
+    font-size: 1.5vw;
+}
+.backButton a{
+    
+    text-decoration: none; 
+    font-weight: bold;
+}
+.backButton a:hover{
+    color: rgb(216, 27, 175);
+}
+.imgSide{
+    border: 2px solid rgb(216, 27, 175); 
+    position: relative; 
+    margin: 2vw auto 20% auto;
 }

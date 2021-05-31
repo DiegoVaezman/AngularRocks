@@ -1,1 +1,20 @@
-<p>band-info works!</p>
+<div class="bandInfoBody">
+    <div [innerHTML]="selectedBand.bio.summary" class="textInfo">
+    
+    </div>
+    <div class="topList">
+        <div class="topAlbums">
+            <p style="font-weight: bold;">TOP 10 ALBUMS:</p>
+            <p *ngFor="let album of topAlbums">{{album.name}}</p>
+        </div>
+        <div class="topTracks">
+            <div style="display: flex; flex-direction: row;">
+                <p style="font-weight: bold; ">TOP 10 TRACKS: </p>
+                <p style="font-size: 1vw;">Link to Youtube</p>
+            </div>
+            <p *ngFor="let track of topTracks">
+                <a href="https://www.youtube.com/results?search_query={{track.name}}" target="_blank" >{{track.name}}</a>
+            </p>
+        </div>
+    </div>
+</div>

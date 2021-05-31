@@ -7,13 +7,20 @@ import { BandsListService } from '../bands-list.service';
   styleUrls: ['./bands-list.component.css']
 })
 export class BandsListComponent implements OnInit {
-
+  textInput!:String;
 
   constructor(public bandsList:BandsListService) {
   }
 
 
   ngOnInit(): void {
+  }
+
+  search(){
+    this.bandsList.filterSavedBands(this.textInput);
+    if (!(this.textInput == undefined || this.textInput == '')) {
+      this.bandsList.showBackBotton();
+    } 
   }
 
 }

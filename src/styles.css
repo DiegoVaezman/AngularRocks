@@ -9,4 +9,30 @@ body{
 }
 p{
     margin-left: 10px;
+    font-size: 1.5vw;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 191, 236);
+}
+a:hover{
+    color: rgb(216, 27, 175)
+}
+
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(160, 89, 142); 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgb(148, 7, 113); 
 }

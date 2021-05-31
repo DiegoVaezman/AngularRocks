@@ -4,23 +4,33 @@
         <h1>80s ROCK BANDS</h1>
     </div>
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Buscar grupo" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+        <input [attr.disabled] = "bandsList.backButton == true ? 'disabled' : null" type="text" [(ngModel)]="textInput" class="form-control" placeholder="Buscar grupo" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button [attr.disabled] = "bandsList.backButton == true ? 'disabled' : null" type="button" class="btn btn-outline-secondary" id="button-addon2" (click)="search()">Buscar</button>
     </div>
 </div>
 <div class="body_list">
     <div class="list_said">
-        <div *ngIf="bandsList.getDataHover()" >
-        
-            Nombre banda: {{bandsList.getDataHover()}}<br>
-        
-            Imagen<br>
-        
-            año<br>
-        
-            discos<br>
-        
-            info..
+        <div class="backButton" *ngIf="bandsList.backButton">
+            <a [routerLink]="['/bandslist']" (click)="bandsList.filterSavedBands('')" (click)="textInput=''" (click)=bandsList.showBackBotton()> 
+                Back
+            </a>
+        </div>
+        <div style="width: 100%; height: 100%;" *ngIf="bandsList.getDataHover()" >
+            <div style="width: 80%; height: 40%" class="imgSide">
+                <img style="width: 100%; height: 100%; " [src]="bandsList.getDataHover().image[0]['#text']!= '' ? bandsList.getDataHover().image[0]['#text'] : '../../assets/default_band_img.jpg'" alt="band_img" />
+            </div>
+            <p style="font-weight: bold;">{{bandsList.getDataHover().name.split("_").join(" ")}}</p>
+            <div style="font-size: 1vw;">
+                <p>Lastfm info:</p>
+                <ul>
+                    <li>
+                        Listeners: {{bandsList.getDataHover().stats.listeners}}
+                    </li>
+                    <li>
+                        Play count: {{bandsList.getDataHover().stats.playcount}}
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <router-outlet></router-outlet>

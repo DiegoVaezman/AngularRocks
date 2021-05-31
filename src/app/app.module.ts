@@ -10,13 +10,14 @@ import { BandsListComponent } from './bands-list/bands-list.component';
 import { ListComponent } from './list/list.component';
 import { BandInfoComponent } from './band-info/band-info.component'
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
 
 const rutasApp:Routes = [
   { path:'', component: HomeComponent, pathMatch: 'full' },
   { path:'bandslist', component: BandsListComponent, 
     children: [
       { path: '', component:  ListComponent },
-      { path: 'grupo1', component:  BandInfoComponent }
+      { path: 'bandinfo/:name', component:  BandInfoComponent }
     ]
   },
   // { path:'bandslist', component: ListComponent },
@@ -41,7 +42,8 @@ const rutasApp:Routes = [
     RouterModule.forRoot(rutasApp),
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
