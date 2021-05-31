@@ -1,0 +1,29 @@
+<div class="header_list">
+    <div class="d-flex flex-row align-items-center">
+        <img src="../../assets/80s_img.jpg" alt="80s_img">
+        <h1>80s ROCK BANDS</h1>
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Buscar grupo" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+    </div>
+</div>
+<div class="body_list">
+    <div class="list_said">
+        <div *ngIf="bandsList.getDataHover()" >
+        
+            Nombre banda: {{bandsList.getDataHover()}}<br>
+        
+            Imagen<br>
+        
+            año<br>
+        
+            discos<br>
+        
+            info..
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+
+

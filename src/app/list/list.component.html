@@ -1,0 +1,3 @@
+<div *ngIf="bandsList.showBands()" class="list">
+  <a *ngFor="let band of bandsList.showBands()" class="itemList" (mouseover)="bandsList.setDataHover(band.name)" (mouseout)="bandsList.setDataHover(null)">{{band.name.split("_").join(" ")}}</a>
+</div>

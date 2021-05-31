@@ -1,0 +1,13 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    /* background: white; */
+    width: 60vw;
+    height: 28vw;
+    overflow-y: scroll;
+}
+.itemList{
+    background: cornsilk;
+    margin: 10px 0 0 5px;
+    height: 25%;
+}
