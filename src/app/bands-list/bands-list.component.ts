@@ -23,4 +23,6 @@ export class BandsListComponent implements OnInit {
     } 
   }
 
+  
+
 }

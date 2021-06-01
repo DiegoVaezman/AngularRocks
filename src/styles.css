@@ -14,9 +14,11 @@ p{
 a{
     text-decoration: none;
     color: rgb(255, 191, 236);
+    font-size: 1.5vw;
 }
 a:hover{
-    color: rgb(216, 27, 175)
+    color: rgb(216, 27, 175);
+    cursor: pointer;
 }
 
 /*scrollbar*/

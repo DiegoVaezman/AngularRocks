@@ -16,6 +16,7 @@ export class BandInfoComponent implements OnInit {
   selectedBand!:any;
   topAlbums!:any;
   topTracks!:any;
+  confirmDisplay:String = "none";
 
   constructor( private route:ActivatedRoute, public bandsList:BandsListService, private http:HttpClient) { 
     this.bandList = bandsList.loadedBands;

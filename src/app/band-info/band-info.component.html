@@ -1,20 +1,40 @@
 <div class="bandInfoBody">
-    <div [innerHTML]="selectedBand.bio.summary" class="textInfo">
+    <div >
+        <div [innerHTML]="selectedBand.bio.summary" class="textInfo">
     
-    </div>
-    <div class="topList">
-        <div class="topAlbums">
-            <p style="font-weight: bold;">TOP 10 ALBUMS:</p>
-            <p *ngFor="let album of topAlbums">{{album.name}}</p>
         </div>
-        <div class="topTracks">
-            <div style="display: flex; flex-direction: row;">
-                <p style="font-weight: bold; ">TOP 10 TRACKS: </p>
-                <p style="font-size: 1vw;">Link to Youtube</p>
+        <div class="topList">
+            <div class="topAlbums">
+                <p style="font-weight: bold;">TOP 10 ALBUMS:</p>
+                <p *ngFor="let album of topAlbums">{{album.name}}</p>
             </div>
-            <p *ngFor="let track of topTracks">
-                <a href="https://www.youtube.com/results?search_query={{track.name}}" target="_blank" >{{track.name}}</a>
-            </p>
+            <div class="topTracks">
+                <div style="display: flex; flex-direction: row;">
+                    <p style="font-weight: bold; ">TOP 10 TRACKS: </p>
+                    <p style="font-size: 1vw;">Link to Youtube</p>
+                </div>
+                <p *ngFor="let track of topTracks">
+                    <a href="https://www.youtube.com/results?search_query={{track.name}}" target="_blank" >{{track.name}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="divedit">
+        <div class="edit">
+            <a [routerLink]="['/bandslist']">Editar</a>
+        </div>
+        <div class="del">
+            <a href="javascript:void(0)" (click)="confirmDisplay = 'flex'">Eliminar</a>
+        </div>
+    </div>
+</div>
+<div class="confirmation" [style.display]="confirmDisplay">
+    <div>
+        <p>Are you sure?</p>
+        <div style="display: flex; justify-content: space-around; ">
+            <a [routerLink]="['/bandslist']" >Yes</a>
+            <a href="javascript:void(0)" (click)="confirmDisplay = 'none'" >No</a>
         </div>
     </div>
 </div>
