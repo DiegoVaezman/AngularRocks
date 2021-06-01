@@ -61,4 +61,8 @@ export class BandInfoComponent implements OnInit {
     return band
   }
   
+  deleteBand(){
+    const indexSaved = this.bandsList.savedBands.indexOf(this.bandName)
+    this.bandsList.savedBands.splice(indexSaved,1);
+  }
 }

@@ -9,10 +9,10 @@ export class BandsListService {
     "The_Rolling_Stones",
     "Led_Zeppelin",
     "Queen",
-    "Pink_Floyd",
-    "Deep_Purple",
+    "pink_floyd",
+    "deep_purple",
     "AC/DC",
-    "The_Ramones",
+    "the_ramones",
     "Kiss"
   ];
   loadedBands!:any;

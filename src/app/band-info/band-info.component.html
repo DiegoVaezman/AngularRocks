@@ -33,7 +33,7 @@
     <div>
         <p>Are you sure?</p>
         <div style="display: flex; justify-content: space-around; ">
-            <a [routerLink]="['/bandslist']" >Yes</a>
+            <a [routerLink]="['/bandslist']" (click)="deleteBand()" >Yes</a>
             <a href="javascript:void(0)" (click)="confirmDisplay = 'none'" >No</a>
         </div>
     </div>
