@@ -12,8 +12,8 @@
 </div>
 <div class="body_list">
     <div class="list_said">
-        <div class="backButton" *ngIf="bandsList.backButton">
-            <a (click)="navigateBack()" (click)="bandsList.filterSavedBands('')" (click)="textInput=''" (click)=bandsList.showBackBotton()> 
+        <div class="backButton" >
+            <a (click)="navigateBack()" (click)="resetFilter()" (click)="textInput=''" (click)=bandsList.showBackBotton()> 
                 Back
             </a>
         </div>

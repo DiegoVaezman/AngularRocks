@@ -15,7 +15,6 @@ export class AppComponent {
   constructor(private router: Router, private http:HttpClient, public bandsList:BandsListService ) {}
 
   ngOnInit() {
-    console.log("init app se pone '' text")
     this.router.navigate([''])
     this.cargarLista()
   }
@@ -24,7 +23,10 @@ export class AppComponent {
     this.bandsList.loadedBands = [];
     for (let i=0; i<this.savedBands.length; i++){
       this.http.get<any>(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.savedBands[i]}&api_key=c3c8c602969a83bb0eb4a2774e986025&format=json`).subscribe(
-        (response) => { this.bandsList.addBandToLoadedBands(response.artist), console.log("hay respuesta")},
+        (response) => { 
+          this.bandsList.addBandToLoadedBands(response.artist), 
+          this.bandsList.addBandToFilteredBands(response.artist),
+          console.log("datos cargados en filtered y loaded")},
         (err) => console.log(err)
       )
     }

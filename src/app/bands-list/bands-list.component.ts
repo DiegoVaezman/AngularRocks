@@ -16,21 +16,25 @@ export class BandsListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.bandsList.filter = '';
+    // this.bandsList.filter = '';
   }
 
   search(){
     console.log("searh")
-    this.bandsList.filter = this.textInput;
     console.log(this.bandsList.filter)
-    // this.router.navigate(['']);
-    // this.bandsList.filterSavedBands(this.textInput);
-    // if (!(this.textInput == undefined || this.textInput == '')) {
-    //   this.bandsList.showBackBotton();
-    // } 
+    this.bandsList.filter = this.textInput;
+    this.bandsList.filterBands();
+    console.log(this.bandsList.filteredBands)
+    this.bandsList.filter == '';
+    this.textInput == '';
+    this.bandsList.showBackBotton();
   }
 
   navigateBack() {
     this._location.back();
+  }
+
+  resetFilter(){
+    this.bandsList.filteredBands = this.bandsList.loadedBands;
   }
 }

@@ -65,4 +65,5 @@ export class BandInfoComponent implements OnInit {
     const indexLoaded = this.bandsList.loadedBands.findIndex((band:any) => band.name == this.bandName)
     this.bandsList.loadedBands.splice(indexLoaded,1);
   }
+
 }

@@ -24,6 +24,8 @@ export class BandsListService {
 
   constructor() { 
     this.loadedBands = [];
+    this.filteredBands = [];
+    this.filter = '';
     this.backButton = false;
   }
 
@@ -33,16 +35,11 @@ export class BandsListService {
     return this.savedBands;
   }
   addBandToLoadedBands(band:any){
-    console.log("mete data en loaded")
     this.loadedBands.push(band);
   }
-  // showBands(){
-  //   if (this.filteredBands){
-  //     return this.filteredBands
-  //   } else {
-  //   return this.loadedBands;
-  //   }
-  // }
+  addBandToFilteredBands(band:any){
+    this.filteredBands.push(band);
+  }
 
 
   setDataHover(data:any){
@@ -53,18 +50,25 @@ export class BandsListService {
   }
 
   /*searchBand   creo q n es necesario*/
-  filterSavedBands(text:String){
-    if (text == undefined) {
-      this.filteredBands = this.loadedBands
+  // filterBands(text:String){
+  //   if (text == undefined) {
+  //     this.filteredBands = this.loadedBands
+  //   } else {
+  //   this.filteredBands = this.loadedBands.filter((band:any) => band.name.toLowerCase().includes(text.toLowerCase()))
+  //   }
+  // }
+  filterBands(){
+    if (this.filter == '') {
+      this.filteredBands = this.loadedBands;
     } else {
-    this.filteredBands = this.loadedBands.filter((band:any) => band.name.toLowerCase().includes(text.toLowerCase()))
+    this.filteredBands = this.loadedBands.filter((band:any) => band.name.toLowerCase().includes(this.filter.toLowerCase()));
     }
   }
 
 
   /*show/hide back button*/
   showBackBotton(){
-    // this.backButton = !this.backButton;
+    this.backButton = !this.backButton;
   }
 
 
