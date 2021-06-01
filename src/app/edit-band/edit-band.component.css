@@ -1,0 +1,14 @@
+.editBand{
+    display: flex; 
+    flex-direction: column; 
+    width: 60vw;
+    height: 28vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+.editBand textarea{
+    width: 35vw;
+    height: 15vw;
+    margin-top: 1vw;
+}

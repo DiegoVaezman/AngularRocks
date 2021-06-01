@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,8 @@ export class BandsListService {
   loadedBands!:any;
   dataHover!:any;
   filteredBands!:any;
-  backButton!:Boolean
+  backButton!:Boolean;
+  filter!:String;
 
   constructor() { 
     this.loadedBands = [];
@@ -31,15 +33,16 @@ export class BandsListService {
     return this.savedBands;
   }
   addBandToLoadedBands(band:any){
+    console.log("mete data en loaded")
     this.loadedBands.push(band);
   }
-  showBands(){
-    if (this.filteredBands){
-      return this.filteredBands
-    } else {
-    return this.loadedBands;
-    }
-  }
+  // showBands(){
+  //   if (this.filteredBands){
+  //     return this.filteredBands
+  //   } else {
+  //   return this.loadedBands;
+  //   }
+  // }
 
 
   setDataHover(data:any){
@@ -49,7 +52,7 @@ export class BandsListService {
     return this.dataHover
   }
 
-  /*searchBand*/
+  /*searchBand   creo q n es necesario*/
   filterSavedBands(text:String){
     if (text == undefined) {
       this.filteredBands = this.loadedBands
@@ -58,8 +61,11 @@ export class BandsListService {
     }
   }
 
+
   /*show/hide back button*/
   showBackBotton(){
-    this.backButton = !this.backButton;
+    // this.backButton = !this.backButton;
   }
+
+
 }
