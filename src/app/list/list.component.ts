@@ -9,13 +9,15 @@ import { BandsListService } from '../bands-list.service';
 })
 export class ListComponent implements OnInit {
 
-
+  listToShow!:any;
 
   constructor(private http:HttpClient, public bandsList:BandsListService ) {
+    this.listToShow = this.bandsList.filteredBands;
   }
 
   ngOnInit(): void {
   
   }
 
+  
 }

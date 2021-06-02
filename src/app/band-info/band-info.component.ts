@@ -33,6 +33,7 @@ export class BandInfoComponent implements OnInit {
     this.getTracksData();
   }
 
+  /*Getting artist's albums and tracks */
   getAlbumsData(){
     this.http.get<any>(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${this.bandName}&api_key=c3c8c602969a83bb0eb4a2774e986025&format=json`).subscribe(
       (response) => { for (let i=0; i<10; i++) {this.topAlbums.push(response.topalbums.album[i])} },
@@ -46,6 +47,7 @@ export class BandInfoComponent implements OnInit {
     )
   }
 
+  /*gets selected band and adds target attribute to default responsed tag by setAttributeToDefaultLink()*/
   findBand(){
     let band = this.bandList.filter( (band:any) => band.name == this.bandName)[0];
     if( band.bio.summary.includes('<a target="_blank"')){
@@ -55,15 +57,18 @@ export class BandInfoComponent implements OnInit {
       return band;
     }
   }
-
   setAttributeToDefaultLink(band:any){
     band.bio.summary = band.bio.summary.replace('<a ', '<a target="_blank" ')
     return band
   }
   
+  /*Deleting band */
   deleteBand(){
     const indexLoaded = this.bandsList.loadedBands.findIndex((band:any) => band.name == this.bandName)
     this.bandsList.loadedBands.splice(indexLoaded,1);
+
+    const indexfiltered = this.bandsList.filteredBands.findIndex((band:any) => band.name == this.bandName)
+    this.bandsList.filteredBands.splice(indexfiltered,1);
   }
 
 }

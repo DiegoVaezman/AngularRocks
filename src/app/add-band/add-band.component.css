@@ -11,6 +11,7 @@
     margin-bottom: 2vw;
 }
 
+/*band not found panel*/
 .notFound{
     position: absolute;
     background: rgba(78, 78, 78, 0.911);

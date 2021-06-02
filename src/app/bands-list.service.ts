@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class BandsListService {
 
+  /*Default bands list to load  */
   savedBands:Array<String> = [
     "The_Rolling_Stones",
     "Led_Zeppelin",
@@ -31,6 +32,7 @@ export class BandsListService {
 
 
 
+  /*functions to initial load bands on app.component */
   getSavedBands(){
     return this.savedBands;
   }
@@ -41,7 +43,7 @@ export class BandsListService {
     this.filteredBands.push(band);
   }
 
-
+  /*functions to show data on lateral panel */
   setDataHover(data:any){
     this.dataHover = data;
   }
@@ -49,14 +51,7 @@ export class BandsListService {
     return this.dataHover
   }
 
-  /*searchBand   creo q n es necesario*/
-  // filterBands(text:String){
-  //   if (text == undefined) {
-  //     this.filteredBands = this.loadedBands
-  //   } else {
-  //   this.filteredBands = this.loadedBands.filter((band:any) => band.name.toLowerCase().includes(text.toLowerCase()))
-  //   }
-  // }
+  /*function to filter data */
   filterBands(){
     if (this.filter == '') {
       this.filteredBands = this.loadedBands;
@@ -64,12 +59,5 @@ export class BandsListService {
     this.filteredBands = this.loadedBands.filter((band:any) => band.name.toLowerCase().includes(this.filter.toLowerCase()));
     }
   }
-
-
-  /*show/hide back button*/
-  // showBackBotton(){
-  //   this.backButton = !this.backButton;
-  // }
-
 
 }

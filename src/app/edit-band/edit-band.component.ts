@@ -21,6 +21,7 @@ export class EditBandComponent implements OnInit {
     })
   }
 
+  /*updates loadedBands with new band information */
   editBand(){
     this.bandsList.loadedBands.find((band:any) => band.name == this.bandName).bio.summary = this.textInput;
     this._location.back();

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 import { BandsListComponent } from './bands-list/bands-list.component';
 import { ListComponent } from './list/list.component';
 import { BandInfoComponent } from './band-info/band-info.component'
@@ -23,12 +22,7 @@ const rutasApp:Routes = [
       { path: 'bandinfo/:name/edit', component:  EditBandComponent },
       { path: 'addband', component:  AddBandComponent }
     ]
-  },
-  // { path:'bandslist', component: ListComponent },
-  // { path:'detalles', redirectTo: 'lista-libros' },
-  // { path:'detalles/:libroId', component: DetallesComponent },
-  // { path:'error404', component: Error404Component },
-  // { path:'**', redirectTo: 'error404' } //Debe estar al final de todos.
+  }
 ]
 
 
@@ -37,7 +31,6 @@ const rutasApp:Routes = [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent,
     BandsListComponent,
     ListComponent,
     BandInfoComponent,

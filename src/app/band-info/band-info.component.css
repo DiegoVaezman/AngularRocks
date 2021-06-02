@@ -32,6 +32,7 @@
     overflow-y: scroll;
 }
 
+/*dinamic lateral buttons*/
 .divedit{
     display: flex; 
     flex-direction: column; 
@@ -65,6 +66,7 @@
 }
 
 
+/*delete confirmation panel*/
 .confirmation{
     position: absolute;
     background: rgba(78, 78, 78, 0.911);
