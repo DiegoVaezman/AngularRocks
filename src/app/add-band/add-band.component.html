@@ -1,0 +1,11 @@
+<div class="addBand">
+    <div class="addBandBody">
+        <label for="textInput">Band name</label>
+        <input type="text" id="textInput" placeholder="Write here..." [(ngModel)]="textInput">
+        <button  type="button" class="btn btn-outline-light" (click)="addBand()">Add</button>
+    </div>
+    <div class="notFound" [style.display]="notFound">
+        <p>{{notFoundText}}</p>
+        <button type="button" class="btn btn-outline-light" (click)="notFound = 'none'">Ok</button>
+    </div>
+</div>

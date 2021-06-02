@@ -1,5 +1,5 @@
 <div class="bandInfoBody">
-    <div >
+    <div class="infoContent">
         <div [innerHTML]="selectedBand.bio.summary" class="textInfo">
     
         </div>
@@ -28,13 +28,14 @@
             <a href="javascript:void(0)" (click)="confirmDisplay = 'flex'">Eliminar</a>
         </div>
     </div>
-</div>
-<div class="confirmation" [style.display]="confirmDisplay">
-    <div>
-        <p>Are you sure?</p>
-        <div style="display: flex; justify-content: space-around; ">
-            <a [routerLink]="['/bandslist']" (click)="deleteBand()" >Yes</a>
-            <a href="javascript:void(0)" (click)="confirmDisplay = 'none'" >No</a>
+    <div class="confirmation" [style.display]="confirmDisplay">
+        <div>
+            <p>Are you sure?</p>
+            <div style="display: flex; justify-content: space-around; ">
+                <a [routerLink]="['/bandslist']" (click)="deleteBand()" >Yes</a>
+                <a href="javascript:void(0)" (click)="confirmDisplay = 'none'" >No</a>
+            </div>
         </div>
     </div>
 </div>
+

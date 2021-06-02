@@ -27,7 +27,7 @@ export class BandsListComponent implements OnInit {
     console.log(this.bandsList.filteredBands)
     this.bandsList.filter == '';
     this.textInput == '';
-    this.bandsList.showBackBotton();
+    // this.bandsList.showBackBotton();
   }
 
   navigateBack() {

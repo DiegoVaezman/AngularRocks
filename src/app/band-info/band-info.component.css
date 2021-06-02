@@ -4,6 +4,9 @@
     display: flex;
     flex-direction: row;
 }
+.infoContent{
+    width: 100%;
+}
 
 .textInfo{
     width: 100%; 
@@ -12,12 +15,14 @@
     overflow-y: scroll; 
     font-size: 1.5vw;
 }
+
 .topList{
     border-top: 2px solid grey; 
     display: flex; 
     flex-direction: row; 
     height: 100%;
 }
+ 
 .topAlbums{
     border-right: 2px solid grey; 
 }

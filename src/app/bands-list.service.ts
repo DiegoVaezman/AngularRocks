@@ -67,9 +67,9 @@ export class BandsListService {
 
 
   /*show/hide back button*/
-  showBackBotton(){
-    this.backButton = !this.backButton;
-  }
+  // showBackBotton(){
+  //   this.backButton = !this.backButton;
+  // }
 
 
 }

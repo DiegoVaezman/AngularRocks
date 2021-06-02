@@ -4,8 +4,6 @@
         <h1>80s ROCK BANDS</h1>
     </div>
     <div class="input-group">
-        <!-- <input [attr.disabled] = "bandsList.backButton == true ? 'disabled' : null" type="text" [(ngModel)]="textInput" class="form-control" placeholder="Search band" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button [attr.disabled] = "bandsList.backButton == true ? 'disabled' : null" type="button" class="btn btn-outline-secondary" id="button-addon2" (click)="search()">Search</button> -->
         <input type="text" [(ngModel)]="textInput" class="form-control" placeholder="Search band" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button [routerLink]="['/bandslist']" type="button" class="btn btn-outline-secondary" id="button-addon2" (click)="search()">Search</button>
     </div>
@@ -13,7 +11,7 @@
 <div class="body_list">
     <div class="list_said">
         <div class="backButton" >
-            <a (click)="navigateBack()" (click)="resetFilter()" (click)="textInput=''" (click)=bandsList.showBackBotton()> 
+            <a (click)="navigateBack()" (click)="resetFilter()" (click)="textInput=''"  #backButton> 
                 Back
             </a>
         </div>

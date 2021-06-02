@@ -1,0 +1,25 @@
+.addBandBody{
+    display: flex; 
+    flex-direction: column; 
+    width: 60vw;
+    height: 28vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+.addBand input{
+    margin-bottom: 2vw;
+}
+
+.notFound{
+    position: absolute;
+    background: rgba(78, 78, 78, 0.911);
+    width: 60vw;
+    height: 100%;
+    color: black;
+    top: 0vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
