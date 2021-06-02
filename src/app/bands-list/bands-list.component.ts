@@ -24,6 +24,7 @@ export class BandsListComponent implements OnInit {
     this.bandsList.filterBands();
     this.bandsList.filter == '';
     this.textInput == '';
+    console.log("search")
   }
 
   /*back button function */
