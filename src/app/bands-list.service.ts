@@ -53,12 +53,10 @@ export class BandsListService {
 
   /*function to filter data */
   filterBands(){
-    console.log(this.filter)
     if (this.filter == '') {
       this.filteredBands = this.loadedBands;
     } else {
     this.filteredBands = this.loadedBands.filter((band:any) => band.name.toLowerCase().includes(this.filter.toLowerCase()));
-    console.log(this.filteredBands)
     }
   }
 
