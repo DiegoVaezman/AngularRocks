@@ -22,16 +22,18 @@ export class AddBandComponent implements OnInit {
   addBand(){
     this.http.get<any>(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.textInput}&api_key=c3c8c602969a83bb0eb4a2774e986025&format=json`).subscribe(
         (response) => { 
-          if (response.error){
-            this.notFoundText = response.message;
-            this.notFound = "flex";
-          } else {
+          if (!response.artist.bio) {
+            response.artist.bio = {summary:"No artist info."}
+          }
           this.bandsList.loadedBands.push(response.artist);
           this.bandsList.filteredBands.push(response.artist);
           this.router.navigate([`/bandslist`])
-          }
         },
-        (err) => console.log(err)
+        (err) => { console.log(err)
+        console.log("hay error")
+          this.notFoundText = err.error.message;
+          this.notFound = "flex";
+        }
       )
   }
 }

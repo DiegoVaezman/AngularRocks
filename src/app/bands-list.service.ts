@@ -14,7 +14,6 @@ export class BandsListService {
     "pink_floyd",
     "deep_purple",
     "AC/DC",
-    "the_ramones",
     "Kiss"
   ];
   loadedBands!:any;

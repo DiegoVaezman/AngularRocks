@@ -23,8 +23,9 @@ export class AppComponent {
   loadBandList(){
     this.bandsList.loadedBands = [];
     for (let i=0; i<this.savedBands.length; i++){
-      this.http.get<any>(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.savedBands[i]}&api_key=c3c8c602969a83bb0eb4a2774e986025&format=json`).subscribe(
+      this.http.get<any>(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.savedBands[i].replace(/_/g, ' ')}&api_key=c3c8c602969a83bb0eb4a2774e986025&format=json`).subscribe(
         (response) => { 
+          console.log(response)
           this.bandsList.addBandToLoadedBands(response.artist), 
           this.bandsList.addBandToFilteredBands(response.artist)
         },
