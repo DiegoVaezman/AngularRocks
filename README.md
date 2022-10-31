@@ -6,7 +6,7 @@ AngularRocks es un projecto FrontEnd en Angular. Es una Single Page Aplication d
 ## Funcionalidades:
 
 - Visualizar la lista de bandas de rock cargadas por defecto.
-- Visualizar imagen de la banda e información de oyentes y reproducciones en LastFM. (Actualmente las imagenes que proporciona la API no se muestran correctamente o no están habilitadas. También, algunas bandas no disponen de imagen; en ese caso se utiliza una imagen por defecto).
+- Visualizar imagen de la banda e información de oyentes y reproducciones en LastFM.
 - Visualizar información de la banda con enlace a más información en lastFM, top 10 albumes de la banda y top 10 canciones con enlace a visualizarlas en Youtube.
 - Añadir una nueva banda a la lista.
 - Editar la información de una banda seleccionada.
@@ -15,7 +15,7 @@ AngularRocks es un projecto FrontEnd en Angular. Es una Single Page Aplication d
 <br>
 
 ```
-Este projecto no tiene un BackEnd donde almacenar datos en un DB por lo que, cada vez que se inicialice, la lista de bandas volverá a ser la inicial y los cambios producidos (añadir, eliminar, editar) se perderán. 
+<!-- Este projecto no tiene un BackEnd donde almacenar datos en un DB por lo que, cada vez que se inicialice, la lista de bandas volverá a ser la inicial y los cambios producidos (añadir, eliminar, editar) se perderán. -->
 ```
 
 API de música de LastFM. https://www.last.fm/api#getting-started
