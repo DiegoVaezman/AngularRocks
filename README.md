@@ -13,11 +13,11 @@ AngularRocks es un projecto FrontEnd en Angular. Es una Single Page Aplication d
 - Eliminar una banda seleccionada.
 <br>
 <br>
-
+<!--
 ```
-<!-- Este projecto no tiene un BackEnd donde almacenar datos en un DB por lo que, cada vez que se inicialice, la lista de bandas volverá a ser la inicial y los cambios producidos (añadir, eliminar, editar) se perderán. -->
+ Este projecto no tiene un BackEnd donde almacenar datos en un DB por lo que, cada vez que se inicialice, la lista de bandas volverá a ser la inicial y los cambios producidos (añadir, eliminar, editar) se perderán. 
 ```
-
+-->
 API de música de LastFM. https://www.last.fm/api#getting-started
 <br>
 <br>
